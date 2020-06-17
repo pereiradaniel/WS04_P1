@@ -11,16 +11,16 @@ namespace sdds
 		m_name[0] = '\0';
 		m_dob = 0;
 		m_power = 0;
-		bool m_super = false;
+		m_super = false;
 	};
-	
+
 	Saiyan::Saiyan(const char* name, int dob, int power) {
 		set(name, dob, power);
 	};
 
 	Saiyan::~Saiyan() {
 	};
-	
+
 	void Saiyan::set(const char* name, int dob, int power, bool super) {
 		if (name == nullptr || dob > 2020 || power < 0)
 		{
@@ -34,7 +34,7 @@ namespace sdds
 			m_super = super;
 		}
 	};
-	
+
 	bool Saiyan::isValid() const {
 		// validate Saiyan
 		bool valid_state = strlen(m_name) != '\0' && m_dob < 2020 && m_power > 0;
